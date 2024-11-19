@@ -26,6 +26,8 @@ function PR = participatio_ratio(X)
 % Author: [Francesco E. Vaccari, PhD]
 % Date: [12/11/2024]
 
+X = X - mean(X); %just to be sure, since it can disrupt results
+
 C = cov(X);
 eigenvalues = eig(C);
 eigenvalues = sort(eigenvalues,'descend');
