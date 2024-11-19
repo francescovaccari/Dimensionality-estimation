@@ -19,6 +19,8 @@ function k = variance_hard_threshold(X, threshold)
 % Author: [Francesco E. Vaccari, PhD]
 % Date: [12/11/2024]
 
+X = X - mean(X); %just to be sure, since it can disrupt results
+
 % Perform PCA using svd (or pca function in MATLAB)
 [~,~,~,~,explained,~] = pca(X);
 
