@@ -18,7 +18,7 @@ Refer to each function header to be aware of input/output variables.
 
 Add the Matlab subfolder to the Matlab search path.
 
-Example code in `dimensionality_demo.m` generates data and analyze the resulting data matrix with all the criteria provided in the package plotting the results.
+Example code in `dimensionality_DEMO.m` generates data and analyze the resulting data matrix with all the criteria provided in the package plotting the results.
 
 Note: the package was implemented on MATLAB 2024b. Backward compatibility with older versions is not guaranteed.
 
