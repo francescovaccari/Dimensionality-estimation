@@ -193,9 +193,10 @@ if display
     yyaxis right
     plot(cumsum(L_var))  % Cumulative explained variance for real latent variables
     plot(cumsum(score_var))  % Cumulative explained variance for PCs
-    legend('Real Latent Variance', 'PCs Variance', 'Real Latent Variance Cumsum', 'PCs Variance Cumsum')
+    legend('True Latent Variance', 'PCs Variance', 'True Latent Variance Cumsum', 'PCs Variance Cumsum')
     xlabel('Dimensions')
     ylabel('Total Explained Variance')
+    title('Generated data underlying structure')
 end
 
 % Output the results
