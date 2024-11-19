@@ -32,6 +32,7 @@ function k = parallel_analysis(X, quant, num_rep)
 % Author: [Francesco E. Vaccari, PhD]
 % Date: [12/11/2024]
 
+X = X - mean(X); %just to be sure, since it can disrupt results
 
 c = cov(X);
 real_e = eig(c);
