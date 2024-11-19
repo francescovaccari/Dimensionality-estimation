@@ -33,8 +33,10 @@ parse(p, varargin{:});
 % Get the value of UseVariance from the parsed inputs
 UseVariance = p.Results.UseVariance;
 
+X = X - mean(X); %just to be sure, since it can disrupt results
+
 if UseVariance
-    [~,~,~,~,explained,~] = pca(X)
+    [~,~,~,~,explained,~] = pca(X);
 
     % Compute the variance explained by the original variables
     OrigVar = mean( var(X) / sum(var(X)) ) * 100;
