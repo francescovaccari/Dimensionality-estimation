@@ -6,8 +6,9 @@ This repository contains code to apply different crtieria to choose the optimal 
 Upon usage, please cite:
 > FE Vaccari, S Diomedi, E Bettazzi, M Filippini, M De Vitis, K Hadjidimitrakis, P Fattori<br>
 > **More or less latent variables  in the high-dimensional data space? That is the question**<br>
-> Journal yyyy, [link here]<br>
-> (arXiv link: [link here])
+> bioRxiv 2024.11.28.625854
+> (doi: https://doi.org/10.1101/2024.11.28.625854)
+
 
 ## Use of the package
 
