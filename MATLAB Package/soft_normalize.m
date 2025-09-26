@@ -1,20 +1,39 @@
 function [B] = soft_normalize(A, k, dim)
-% SOFT_NORMALIZE Normalizes the input matrix or vector A using the formula:
-%   norm_response = response / (range(response) + k)
-% The normalization is applied along a specified dimension (rows or columns).
-% If A is a vector, normalization is applied to the vector itself.
+%--------------------------------------------------------------------------
+% SOFT_NORMALIZE Soft normalization of matrices and vectors
+%
+% Normalizes data using a "soft" normalization approach that adds a constant to 
+% the range in the denominator. This helps prevent extreme amplification of noise 
+% when the range is very small. Particularly useful for neural data.
+%
+% Syntax:
+%   B = soft_normalize(A, k)
+%   B = soft_normalize(A, k, dim)
 %
 % Inputs:
-%   A     - Input matrix or vector to be normalized (numeric array).
-%   k     - A constant added to the range in the denominator (often equal to 5 for cortical firing rates).
-%   dim   - (Optional) Dimension along which to normalize:
-%          1 for normalization along rows (DEFAULT),
-%          2 for normalization along columns.
-%          If A is a vector, dim is not needed.
+%   A     - Input matrix or vector to be normalized (numeric array)
+%   k     - Constant added to range in denominator
+%   dim   - (Optional) Dimension for normalization:
+%           1 = along rows (default)
+%           2 = along columns
+%           Not needed if A is a vector
 %
-% Outputs:
-%   B     - Normalized matrix or vector with the same size as A.
+% Output:
+%   B     - Normalized matrix/vector, same size as input A
+%           Formula: B = A / (range(A) + k)
 %
+% Example:
+%   % Normalize a matrix along columns with k=5
+%   X = rand(100,10);
+%   Xnorm = soft_normalize(X, 5, 2);
+%
+%   % Normalize a vector
+%   v = rand(100,1);
+%   vnorm = soft_normalize(v, 5);
+%
+% Author: Francesco E. Vaccari, PhD
+% Date: September 24, 2025
+%--------------------------------------------------------------------------
 
 
 % If A is a vector, handle it as a 1D input, no need for 'dim'

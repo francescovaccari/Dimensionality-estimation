@@ -23,7 +23,7 @@ function [tau, coefficients] = fit_tau(A, display)
 % Date: [12/11/2024]
 
 [~,~,~,~,explained,~] = pca(A);
-Y = explained(1:min([size(A,2) 20]));
+Y = explained(1:min([size(A,2) 25]));
 
 % Ensure Y is a column vector.
 if size(Y,2) > size(Y,1)
