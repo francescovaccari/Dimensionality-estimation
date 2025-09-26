@@ -1,4 +1,4 @@
-function PR = participatio_ratio(X)
+function PR = participation_ratio(X)
 
 % participation_ratio - Calculates the participation ratio of the eigenspectrum 
 % of the input matrix to assess the dimensionality of the data.
@@ -9,7 +9,7 @@ function PR = participatio_ratio(X)
 % indicating a more evenly distributed eigenspectrum, suggesting an higher dimensionality.
 %
 % Reference:
-%   Gao, et al., 2017. "Participation ratio as a measure of dimensionality", 
+%   Gao, et al., 2017. "A theory of multineuronal dimensionality, dynamics and measurement", 
 %   https://www.biorxiv.org/content/10.1101/214262v2
 %
 % Inputs:
@@ -34,3 +34,4 @@ eigenvalues = sort(eigenvalues,'descend');
 PR = (sum(eigenvalues))^2 / sum(eigenvalues.^2);
 
 end
+
